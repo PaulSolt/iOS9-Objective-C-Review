@@ -26,4 +26,9 @@
 	return [NSString stringWithFormat:@"%@", self.title];
 }
 
+- (void)dealloc {
+	NSLog(@"LSIPhoto.dealloc");
+	[super dealloc];
+}
+
 @end
