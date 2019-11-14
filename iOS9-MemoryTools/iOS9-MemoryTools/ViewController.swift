@@ -69,25 +69,22 @@ class Person {
 
 class ViewController: UIViewController {
 
+	var person: Person? = Person(name: "Steve")
+
 	override func viewDidLoad() {
 		super.viewDidLoad()
 
 		do {
-			var person: Person? = Person(name: "Steve")
 			//let phone = Phone()
 			//person?.phone = phone
 
 			let phone = person?.phone // Steal the phone (strong reference to Steve's phone)
 			
 			person?.phone.call()
-			person = nil
+//			person = nil
 			
-			phone?.call()
-			
+			phone?.call()	
 		}
-
-
-
 	}
 
 
