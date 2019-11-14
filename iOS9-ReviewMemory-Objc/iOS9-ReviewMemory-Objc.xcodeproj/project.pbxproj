@@ -16,6 +16,7 @@
 		BD638565237DD45F009E9142 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BD638564237DD45F009E9142 /* main.m */; };
 		BD63856F237DD460009E9142 /* iOS9_ReviewMemory_ObjcTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BD63856E237DD460009E9142 /* iOS9_ReviewMemory_ObjcTests.m */; };
 		BD63857A237DD4BA009E9142 /* November-APOD.json in Resources */ = {isa = PBXBuildFile; fileRef = BD638579237DD4BA009E9142 /* November-APOD.json */; };
+		BD63857D237DD739009E9142 /* LSIPhoto.m in Sources */ = {isa = PBXBuildFile; fileRef = BD63857C237DD739009E9142 /* LSIPhoto.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +46,8 @@
 		BD63856E237DD460009E9142 /* iOS9_ReviewMemory_ObjcTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iOS9_ReviewMemory_ObjcTests.m; sourceTree = "<group>"; };
 		BD638570237DD460009E9142 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BD638579237DD4BA009E9142 /* November-APOD.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "November-APOD.json"; sourceTree = "<group>"; };
+		BD63857B237DD739009E9142 /* LSIPhoto.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LSIPhoto.h; sourceTree = "<group>"; };
+		BD63857C237DD739009E9142 /* LSIPhoto.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LSIPhoto.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +95,8 @@
 				BD638556237DD45C009E9142 /* SceneDelegate.m */,
 				BD638558237DD45C009E9142 /* ViewController.h */,
 				BD638559237DD45C009E9142 /* ViewController.m */,
+				BD63857B237DD739009E9142 /* LSIPhoto.h */,
+				BD63857C237DD739009E9142 /* LSIPhoto.m */,
 				BD638579237DD4BA009E9142 /* November-APOD.json */,
 				BD63855B237DD45D009E9142 /* Main.storyboard */,
 				BD63855E237DD45F009E9142 /* Assets.xcassets */,
@@ -213,6 +218,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BD63855A237DD45C009E9142 /* ViewController.m in Sources */,
+				BD63857D237DD739009E9142 /* LSIPhoto.m in Sources */,
 				BD638554237DD45C009E9142 /* AppDelegate.m in Sources */,
 				BD638565237DD45F009E9142 /* main.m in Sources */,
 				BD638557237DD45C009E9142 /* SceneDelegate.m in Sources */,

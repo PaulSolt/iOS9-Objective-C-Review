@@ -7,8 +7,11 @@
 //
 
 #import "ViewController.h"
+#import "LSIPhoto.h"
 
 @interface ViewController ()
+
+@property NSMutableArray *apodArray;
 
 @end
 
@@ -17,14 +20,32 @@
 - (void)viewDidLoad {
 	[super viewDidLoad];
 
+	_apodArray = [[NSMutableArray alloc] init];
+	
     NSString *filePath = [[NSBundle mainBundle] pathForResource:@"November-APOD" ofType:@"json"];
-    NSString *json = [NSString stringWithContentsOfFile:filePath
-													 encoding:NSUTF8StringEncoding
-														error:nil];
-
+	NSData *jsonData = [NSData dataWithContentsOfFile:filePath];
+	NSError *error = nil;
+	NSArray *photoArray = [NSJSONSerialization JSONObjectWithData:jsonData options:0 error:&error];
+	
+	if (error) {
+		NSLog(@"Error: %@", error);
+	}
+	
+	NSLog(@"APOD: %@", photoArray);
+	
 	// Loop through each dictionary
 		// Create an object
 		// Store in an array
+	
+	for (NSDictionary *photoDictionary in photoArray) {
+		
+		LSIPhoto *photo = [[LSIPhoto alloc] initWithDictionary:photoDictionary];
+		
+		// store the data
+		[self.apodArray addObject:photo];
+	}
+	
+	NSLog(@"Photos: %@", self.apodArray);
 }
 
 
