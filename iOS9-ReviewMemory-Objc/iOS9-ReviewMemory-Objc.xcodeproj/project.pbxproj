@@ -15,6 +15,7 @@
 		BD638562237DD45F009E9142 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD638560237DD45F009E9142 /* LaunchScreen.storyboard */; };
 		BD638565237DD45F009E9142 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BD638564237DD45F009E9142 /* main.m */; };
 		BD63856F237DD460009E9142 /* iOS9_ReviewMemory_ObjcTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BD63856E237DD460009E9142 /* iOS9_ReviewMemory_ObjcTests.m */; };
+		BD63857A237DD4BA009E9142 /* November-APOD.json in Resources */ = {isa = PBXBuildFile; fileRef = BD638579237DD4BA009E9142 /* November-APOD.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +44,7 @@
 		BD63856A237DD460009E9142 /* iOS9-ReviewMemory-ObjcTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "iOS9-ReviewMemory-ObjcTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD63856E237DD460009E9142 /* iOS9_ReviewMemory_ObjcTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iOS9_ReviewMemory_ObjcTests.m; sourceTree = "<group>"; };
 		BD638570237DD460009E9142 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BD638579237DD4BA009E9142 /* November-APOD.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "November-APOD.json"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +92,7 @@
 				BD638556237DD45C009E9142 /* SceneDelegate.m */,
 				BD638558237DD45C009E9142 /* ViewController.h */,
 				BD638559237DD45C009E9142 /* ViewController.m */,
+				BD638579237DD4BA009E9142 /* November-APOD.json */,
 				BD63855B237DD45D009E9142 /* Main.storyboard */,
 				BD63855E237DD45F009E9142 /* Assets.xcassets */,
 				BD638560237DD45F009E9142 /* LaunchScreen.storyboard */,
@@ -189,6 +192,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BD638562237DD45F009E9142 /* LaunchScreen.storyboard in Resources */,
+				BD63857A237DD4BA009E9142 /* November-APOD.json in Resources */,
 				BD63855F237DD45F009E9142 /* Assets.xcassets in Resources */,
 				BD63855D237DD45D009E9142 /* Main.storyboard in Resources */,
 			);
@@ -367,6 +371,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_OBJC_ARC = NO;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = VXUQXR6S56;
 				INFOPLIST_FILE = "iOS9-ReviewMemory-Objc/Info.plist";
@@ -384,6 +389,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_OBJC_ARC = NO;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = VXUQXR6S56;
 				INFOPLIST_FILE = "iOS9-ReviewMemory-Objc/Info.plist";

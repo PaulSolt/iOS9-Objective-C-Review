@@ -16,7 +16,15 @@
 
 - (void)viewDidLoad {
 	[super viewDidLoad];
-	// Do any additional setup after loading the view.
+
+    NSString *filePath = [[NSBundle mainBundle] pathForResource:@"November-APOD" ofType:@"json"];
+    NSString *json = [NSString stringWithContentsOfFile:filePath
+													 encoding:NSUTF8StringEncoding
+														error:nil];
+
+	// Loop through each dictionary
+		// Create an object
+		// Store in an array
 }
 
 
