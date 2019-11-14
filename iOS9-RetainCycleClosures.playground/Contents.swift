@@ -43,9 +43,13 @@ class Person {
 		// [weak self] = self is an optional
 		// [unowned self] = self is an implictly unwrapped optional
 		
-        self.phone.whenPhoneRings { //[weak self] in // Memory leak! retain cycle
+		// Closures implicitly capture (create a strong reference) any variable
+		// we use inside the block of code
+		// If you use `self.anything` then you're capturing self, which can make
+		// a reference cycle
+        self.phone.whenPhoneRings { [weak self] in // Memory leak! retain cycle
             print("<Answering phone>")
-            print("Hello this is \(self.name)")
+            print("Hello this is \(self?.name)")
         }
     }
 }
