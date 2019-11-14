@@ -48,8 +48,13 @@ class Person {
 		// If you use `self.anything` then you're capturing self, which can make
 		// a reference cycle
         self.phone.whenPhoneRings { [weak self] in // Memory leak! retain cycle
-            print("<Answering phone>")
-            print("Hello this is \(self?.name)")
+			guard let self = self else {
+				print("Person is nil")
+				return // Early exit if the object disappears (like a detail view controller getting cleaned up)
+			}
+			
+			print("<Answering phone>")
+            print("Hello this is \(self.name)")
         }
     }
 }
@@ -59,6 +64,11 @@ do {
 	//let phone = Phone()
 	//person?.phone = phone
 
+	let phone = person?.phone // Steal the phone (strong reference to Steve's phone)
+	
 	person?.phone.call()
 	person = nil
+	
+	phone?.call()
+	
 }
