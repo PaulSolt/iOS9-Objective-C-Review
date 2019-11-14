@@ -28,9 +28,14 @@ class Phone {
     }
 }
 
+protocol PersonDelegate: AnyObject {
+	func sayHi()
+}
+
 class Person {
     let name: String
     var phone: Phone
+	weak var delegate: PersonDelegate?
 
     init(name: String) {
         print("Person.init: \(name)")
@@ -54,15 +59,15 @@ class Person {
 		// we use inside the block of code
 		// If you use `self.anything` then you're capturing self, which can make
 		// a reference cycle
-        self.phone.whenPhoneRings { [weak self] in // Memory leak! retain cycle
+		self.phone.whenPhoneRings { [weak self] in // Memory leak! retain cycle
 			guard let self = self else {
 				print("Person is nil")
 				return // Early exit if the object disappears (like a detail view controller getting cleaned up)
 			}
 			
 			print("<Answering phone>")
-            print("Hello this is \(self.name)")
-        }
+			print("Hello this is \(self.name)")
+		}
     }
 }
 
@@ -78,12 +83,12 @@ class ViewController: UIViewController {
 			//let phone = Phone()
 			//person?.phone = phone
 
-			let phone = person?.phone // Steal the phone (strong reference to Steve's phone)
+//			let phone = person?.phone // Steal the phone (strong reference to Steve's phone)
 			
 			person?.phone.call()
-//			person = nil
+			person = nil
 			
-			phone?.call()	
+//			phone?.call()	
 		}
 	}
 
