@@ -65,7 +65,7 @@
 	
 	/// Force a cleanup
 	
-	[self.apodArray release]; // releasing an array will release each reference count for an object stored
+//	[self.apodArray release]; // releasing an array will release each reference count for an object stored
 //	self.apodArray = nil;
 	
 	// there's no reference to our original data, but the memory is somewhere
